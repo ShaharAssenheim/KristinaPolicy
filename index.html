@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>תקנון הסטודיו · Kristina Place Of Beauty</title>
+<meta name="description" content="תקנון ונהלי הסטודיו של Kristina Place Of Beauty — מדיניות ביטולים, איחורים, אחריות, תשלום ותיאום טיפולים.">
+<meta name="theme-color" content="#f8f4f1">
+<meta name="color-scheme" content="light">
+
+<!-- ============================================================
+     תצוגה מקדימה בשיתוף (וואטסאפ / פייסבוק / טלגרם)
+     חשוב: וואטסאפ קורא רק כתובות מלאות (https://...) — לא נתיב יחסי.
+     החליפו את kristina-beauty.co.il בדומיין האמיתי בכל השורות למטה.
+     ============================================================ -->
+<link rel="canonical" href="https://kristina-beauty.co.il/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="he_IL">
+<meta property="og:site_name" content="Kristina Place Of Beauty">
+<meta property="og:url" content="https://kristina-beauty.co.il/">
+<meta property="og:title" content="תקנון הסטודיו · Kristina Place Of Beauty">
+<meta property="og:description" content="נהלי הסטודיו: ביטולים ושינוי תורים, איחורים, אחריות על העבודה, תשלום ותיאום טיפולים.">
+<meta property="og:image" content="https://kristina-beauty.co.il/images/share.jpg">
+<meta property="og:image:secure_url" content="https://kristina-beauty.co.il/images/share.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Kristina Place Of Beauty — תקנון הסטודיו">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="תקנון הסטודיו · Kristina Place Of Beauty">
+<meta name="twitter:description" content="נהלי הסטודיו: ביטולים ושינוי תורים, איחורים, אחריות על העבודה, תשלום ותיאום טיפולים.">
+<meta name="twitter:image" content="https://kristina-beauty.co.il/images/share.jpg">
+
+<link rel="icon" href="images/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Heebo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   Kristina Place Of Beauty — Studio Terms
+   Single-file static page. No dependencies, no scripts required
+   for readability (JS only enhances motion).
+   ============================================================ */
+
+/* ---------- reset ---------- */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+img,svg{display:block;max-width:100%}
+ul{list-style:none}
+
+/* ---------- tokens ---------- */
+:root{
+  --plum:#2A1C24;
+  --plum-deep:#1B1116;
+  --ink:#2E2028;
+  --ink-2:#4A3841;
+  --muted:#7C6871;
+  --cream:#FCF8F5;
+  --cream-2:#F6ECE4;
+  --cream-3:#EFE1D6;
+
+  --gold-1:#E9CBA7;
+  --gold-2:#C08457;
+  --gold-3:#F6E6D2;
+  --gold-deep:#A96C42;
+  --rose:#D9A7AC;
+
+  --line:rgba(192,132,87,.20);
+  --line-strong:rgba(192,132,87,.38);
+
+  --shadow-s:0 1px 2px rgba(42,28,36,.04), 0 6px 18px rgba(42,28,36,.05);
+  --shadow-m:0 2px 6px rgba(42,28,36,.05), 0 20px 50px -18px rgba(42,28,36,.22);
+  --shadow-l:0 30px 80px -30px rgba(42,28,36,.42);
+
+  /* Bellefair — סריף עברי אלגנטי ומודרני לכותרות (עברית + לטינית)
+     Heebo — סאנס עברי נקי וקריא לגוף הטקסט
+     Cormorant — רק ללטינית: שם המותג והספרות */
+  --serif:"Bellefair", "Frank Ruhl Libre", Georgia, serif;
+  --sans:"Heebo", "Assistant", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --display:"Cormorant Garamond", "Bellefair", serif;
+
+  --s-0:clamp(.95rem, .9rem + .22vw, 1.075rem);
+  --s-1:clamp(1.05rem, .98rem + .34vw, 1.22rem);
+  --s-2:clamp(1.35rem, 1.15rem + .9vw, 1.9rem);
+  --s-3:clamp(2rem, 1.5rem + 2.4vw, 3.4rem);
+  --s-4:clamp(2.8rem, 1.7rem + 5.2vw, 6.2rem);
+
+  --wrap:min(1120px, 91vw);
+
+  /* motion tokens — built-in easings are too weak */
+  --ease:cubic-bezier(.22,.72,.24,1);        /* ambient drift */
+  --ease-out:cubic-bezier(.23,1,.32,1);      /* entrances + hover exits */
+  --ease-in-out:cubic-bezier(.77,0,.175,1);  /* on-screen movement */
+}
+
+/* ambient loops idle when their section is off-screen */
+.paused,.paused *{animation-play-state:paused !important}
+
+/* ---------- base ---------- */
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--sans);
+  font-size:var(--s-0);
+  line-height:1.78;
+  color:var(--ink);
+  background:var(--plum-deep);
+  overflow-x:hidden;
+  text-rendering:optimizeLegibility;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{width:var(--wrap);margin-inline:auto}
+
+/* film grain over everything */
+body::after{
+  /* no mix-blend-mode: a fixed full-screen blend layer forces the browser to
+     re-blend the backdrop while the page scrolls. Plain low opacity looks the
+     same and costs nothing. */
+  content:"";position:fixed;inset:0;z-index:60;pointer-events:none;
+  opacity:.045;
+  background-image:url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ---------- scroll progress ---------- */
+.progress{
+  position:fixed;inset-block-start:0;inset-inline:0;height:3px;z-index:70;
+  background:linear-gradient(90deg,var(--gold-3),var(--gold-2),var(--gold-deep));
+  transform:scaleX(var(--p,0));transform-origin:right center;
+  box-shadow:0 0 18px rgba(192,132,87,.55);
+}
+
+/* ---------- pointer glow ---------- */
+.glow{
+  position:fixed;top:0;left:0;width:520px;height:520px;z-index:0;pointer-events:none;
+  margin:-260px 0 0 -260px;border-radius:50%;opacity:0;
+  background:radial-gradient(circle,rgba(233,203,167,.22),rgba(233,203,167,0) 62%);
+  transition:opacity .6s ease;will-change:transform;
+}
+body.has-pointer .glow{opacity:1}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{
+  position:relative;min-height:100svh;display:grid;place-items:center;
+  padding:clamp(4rem,10vh,8rem) 0 clamp(7rem,14vh,10rem);
+  overflow:hidden;isolation:isolate;color:var(--cream);
+  background:
+    radial-gradient(120% 90% at 80% 0%, #4A2F3C 0%, rgba(74,47,60,0) 55%),
+    radial-gradient(90% 70% at 10% 100%, #3A2430 0%, rgba(58,36,48,0) 60%),
+    linear-gradient(165deg,#2A1C24 0%, #1B1116 100%);
+}
+.orb{position:absolute;border-radius:50%;filter:blur(70px);pointer-events:none;z-index:-1;will-change:transform}
+.orb--a{width:46vmax;height:46vmax;top:-16vmax;right:-12vmax;background:radial-gradient(circle,rgba(192,132,87,.42),transparent 66%);animation:drift 26s var(--ease) infinite}
+.orb--b{width:38vmax;height:38vmax;bottom:-14vmax;left:-10vmax;background:radial-gradient(circle,rgba(217,167,172,.34),transparent 66%);animation:drift 32s var(--ease) infinite reverse}
+.orb--c{width:26vmax;height:26vmax;top:34%;left:26%;background:radial-gradient(circle,rgba(246,230,210,.20),transparent 68%);animation:drift 22s var(--ease) infinite}
+@keyframes drift{
+  0%,100%{transform:translate3d(0,0,0) scale(1)}
+  33%{transform:translate3d(4%,7%,0) scale(1.09)}
+  66%{transform:translate3d(-5%,-4%,0) scale(.95)}
+}
+/* thin luminous grid */
+.hero::before{
+  content:"";position:absolute;inset:0;z-index:-1;opacity:.16;
+  background-image:linear-gradient(rgba(246,230,210,.16) 1px,transparent 1px),
+                   linear-gradient(90deg,rgba(246,230,210,.16) 1px,transparent 1px);
+  background-size:clamp(70px,7vw,110px) clamp(70px,7vw,110px);
+  -webkit-mask-image:radial-gradient(70% 60% at 50% 42%,#000 0%,transparent 78%);
+          mask-image:radial-gradient(70% 60% at 50% 42%,#000 0%,transparent 78%);
+}
+
+.hero__inner{text-align:center;position:relative;z-index:1}
+
+/* ---------- hero portrait ---------- */
+.portrait{
+  position:relative;margin:0 auto clamp(1.4rem,3.4vh,2.2rem);
+  width:clamp(132px,20vw,196px);aspect-ratio:4/5;
+  border-radius:999px 999px 22px 22px;   /* קשת עדינה, לא עיגול מלא */
+  background:linear-gradient(160deg,#3B2833,#241820);
+  box-shadow:0 26px 60px -26px rgba(0,0,0,.75), inset 0 0 0 1px rgba(233,203,167,.28);
+  isolation:isolate;
+}
+.portrait__img{
+  width:100%;height:100%;object-fit:cover;border-radius:inherit;
+  /* object-position גבוה מעט: פנים/ידיים יושבות בשליש העליון של הקשת */
+  object-position:50% 38%;
+}
+/* טבעת זהב דקה שמרחפת מעל התמונה */
+.portrait__ring{
+  position:absolute;inset:-7px;border-radius:inherit;pointer-events:none;
+  border:1px solid rgba(233,203,167,.42);
+  -webkit-mask-image:linear-gradient(200deg,#000 10%,rgba(0,0,0,.15) 70%);
+          mask-image:linear-gradient(200deg,#000 10%,rgba(0,0,0,.15) 70%);
+}
+/* מונוגרם — נראה רק אם התמונה חסרה */
+.portrait__mono{
+  position:absolute;inset:0;z-index:-1;display:grid;place-items:center;
+  font-family:var(--display);font-size:clamp(3.4rem,7vw,5rem);font-weight:500;
+  color:transparent;-webkit-text-stroke:1px rgba(233,203,167,.55);
+  padding-bottom:.1em;
+}
+.portrait.is-empty{background:linear-gradient(160deg,#3B2833,#1F1219)}
+@media (max-width:480px){
+  .portrait{width:clamp(112px,32vw,150px)}
+}
+
+.brand{font-family:var(--display);letter-spacing:.62em;text-indent:.62em;
+  font-size:clamp(.82rem,.72rem + .5vw,1.15rem);font-weight:500;text-transform:uppercase;
+  color:var(--gold-1);opacity:.96}
+.brand--sub{letter-spacing:.42em;text-indent:.42em;font-size:clamp(.62rem,.56rem + .3vw,.82rem);
+  color:rgba(252,248,245,.62);margin-top:.7rem;font-weight:400}
+
+.ornament{display:flex;align-items:center;justify-content:center;gap:.9rem;margin:clamp(1.6rem,4vh,2.6rem) auto}
+.ornament i{display:block;height:1px;width:clamp(40px,9vw,110px);
+  background:linear-gradient(var(--dir,90deg),transparent,var(--gold-2))}
+.ornament i:last-child{--dir:270deg}
+.ornament svg{width:14px;height:14px;color:var(--gold-1);animation:spin 14s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+.hero__title{
+  font-family:var(--serif);font-weight:900;font-size:var(--s-4);line-height:1.02;
+  letter-spacing:-.015em;
+  background:linear-gradient(100deg,var(--gold-3) 0%,#fff6ea 18%,var(--gold-2) 38%,var(--gold-3) 52%,var(--gold-2) 66%,#fff6ea 84%,var(--gold-3) 100%);
+  background-size:260% 100%;
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  animation:shine 9s linear infinite;
+}
+@keyframes shine{to{background-position:-260% 0}}
+.word{display:inline-block;overflow:hidden;vertical-align:bottom;padding-bottom:.1em}
+.word>span{display:inline-block;transform:translateY(118%);animation:rise .9s var(--ease-out) forwards;animation-delay:var(--d,0s)}
+@keyframes rise{to{transform:translateY(0)}}
+
+.hero__meta{
+  margin-top:clamp(1.4rem,3.4vh,2.2rem);font-size:clamp(.8rem,.74rem + .3vw,.98rem);
+  letter-spacing:.24em;text-indent:.24em;color:rgba(252,248,245,.66);font-weight:300;
+}
+.hero__meta b{color:var(--gold-1);font-weight:500}
+
+.cue{position:absolute;inset-block-end:clamp(1.6rem,5vh,3rem);inset-inline:0;display:grid;justify-items:center;gap:.85rem;z-index:1}
+.cue span{font-size:.66rem;letter-spacing:.42em;text-indent:.42em;color:rgba(252,248,245,.5)}
+.cue i{display:block;width:1px;height:64px;background:linear-gradient(rgba(233,203,167,.7),transparent);position:relative;overflow:hidden}
+.cue i::after{content:"";position:absolute;inset-block-start:0;inset-inline:0;height:16px;background:var(--gold-1);
+  animation:slide 2.4s var(--ease-in-out) infinite;will-change:transform}
+@keyframes slide{0%{transform:translateY(-18px);opacity:0}25%{opacity:1}100%{transform:translateY(64px);opacity:0}}
+
+/* fade-in helpers for hero */
+.fade{opacity:0;transform:translateY(18px);animation:fadeUp .85s var(--ease-out) forwards;animation-delay:var(--d,0s)}
+@keyframes fadeUp{to{opacity:1;transform:none}}
+
+/* ============================================================
+   SHEET (light content)
+   ============================================================ */
+.sheet{
+  position:relative;z-index:2;background:var(--cream);
+  border-radius:clamp(28px,4vw,56px) clamp(28px,4vw,56px) 0 0;
+  margin-top:clamp(-6rem,-8vh,-3.5rem);
+  padding:clamp(3.4rem,8vh,6rem) 0 clamp(4rem,9vh,7rem);
+  box-shadow:0 -26px 70px -20px rgba(27,17,22,.55);
+  overflow:hidden;
+}
+.sheet::before{
+  content:"";position:absolute;inset-block-start:0;inset-inline:0;height:1px;
+  background:linear-gradient(90deg,transparent,var(--gold-2),transparent);opacity:.7;
+}
+.sheet::after{
+  content:"";position:absolute;inset-block-start:-10%;inset-inline-start:-10%;width:60vmax;height:60vmax;
+  background:radial-gradient(circle,rgba(217,167,172,.13),transparent 62%);pointer-events:none;
+}
+
+/* ---------- rules cards ---------- */
+.cards{display:grid;gap:clamp(1rem,2.2vw,1.6rem)}
+.card{
+  position:relative;padding:clamp(1.6rem,3.4vw,2.6rem) clamp(1.4rem,3.2vw,2.6rem);
+  border-radius:24px;overflow:hidden;isolation:isolate;
+  background:rgba(255,255,255,.86);
+  border:1px solid var(--line);
+  box-shadow:var(--shadow-s);
+  transition:transform 240ms var(--ease-out),box-shadow 240ms var(--ease-out),border-color 240ms ease;
+}
+/* corner wash */
+.card::before{
+  content:"";position:absolute;inset-block-start:-40%;inset-inline-start:-14%;width:56%;height:180%;z-index:-1;
+  background:radial-gradient(circle at 50% 50%,rgba(233,203,167,.26),transparent 66%);
+  opacity:0;transition:opacity 300ms ease;
+}
+@media (hover:hover) and (pointer:fine){
+  .card:hover{transform:translateY(-4px);box-shadow:var(--shadow-m);border-color:var(--line-strong)}
+  .card:hover::before{opacity:1}
+}
+.card__head{display:flex;align-items:center;gap:clamp(.85rem,1.7vw,1.2rem);margin-bottom:1.35rem}
+
+/* ---------- section number ---------- */
+.card__badge{
+  flex:none;position:relative;display:grid;place-items:center;
+  width:clamp(48px,5.4vw,60px);aspect-ratio:1;border-radius:50%;
+  font-family:var(--display);font-variant-numeric:lining-nums tabular-nums;
+  font-size:clamp(1.45rem,1.15rem + .85vw,1.85rem);font-weight:500;line-height:1;
+  letter-spacing:-.02em;color:var(--gold-deep);
+  padding-bottom:.06em;              /* איזון אופטי של הספרה במרכז המעגל */
+  background:linear-gradient(155deg,#fff,var(--cream-2) 68%,var(--cream-3));
+  box-shadow:inset 0 0 0 1px rgba(192,132,87,.34),
+             0 10px 22px -14px rgba(169,108,66,.85);
+  transition:transform 240ms var(--ease-out),color 240ms ease;
+}
+/* טבעת חיצונית דקה שנפתחת החוצה ב-hover */
+.card__badge::after{
+  content:"";position:absolute;inset:-6px;border-radius:50%;
+  border:1px solid rgba(192,132,87,.42);
+  opacity:0;transform:scale(.86);
+  transition:opacity 240ms ease,transform 240ms var(--ease-out);
+}
+@media (hover:hover) and (pointer:fine){
+  .card:hover .card__badge{transform:scale(1.05);color:var(--gold-2)}
+  .card:hover .card__badge::after{opacity:1;transform:scale(1)}
+}
+.card__head h3{
+  font-family:var(--serif);font-weight:700;font-size:var(--s-2);line-height:1.28;color:var(--ink);
+  letter-spacing:-.012em;
+}
+
+.rules{display:grid;gap:.95rem}
+.rules li{
+  position:relative;display:flex;gap:.85rem;align-items:flex-start;
+  padding-inline-start:.2rem;
+  opacity:0;transform:translateY(14px);
+}
+.card.in .rules li{animation:fadeUp .55s var(--ease-out) forwards;animation-delay:calc(120ms + var(--i,0) * 60ms)}
+.rules li .dot{
+  flex:none;width:9px;height:9px;margin-top:.62em;transform:rotate(45deg);border-radius:2px;
+  background:linear-gradient(140deg,var(--gold-1),var(--gold-2));
+  box-shadow:0 0 0 3px rgba(192,132,87,.10);
+}
+.rules p{color:var(--ink-2);font-weight:300;font-size:var(--s-0);line-height:1.9}
+.rules strong{font-weight:600;color:var(--ink)}
+
+/* emphasised note row */
+.rules li.note{
+  background:linear-gradient(100deg,rgba(217,167,172,.16),rgba(233,203,167,.14));
+  border:1px solid rgba(192,132,87,.24);border-radius:14px;
+  padding:.85rem 1rem;align-items:center;
+}
+.rules li.note .dot{background:var(--rose);box-shadow:0 0 0 3px rgba(217,167,172,.22)}
+.rules li.note p{color:var(--ink);font-weight:400}
+
+/* accent chip inside text */
+.chip{
+  display:inline-block;padding:.06em .5em;margin-inline:.12em;border-radius:.5em;
+  background:linear-gradient(140deg,var(--gold-3),rgba(233,203,167,.6));
+  border:1px solid rgba(192,132,87,.3);color:var(--gold-deep);font-weight:600;
+  font-variant-numeric:tabular-nums;
+}
+
+/* ---------- reveal ---------- */
+/* transform + opacity only: no layout, no paint, stays on the GPU */
+.reveal{opacity:0;transform:translateY(26px);
+  transition:opacity 620ms var(--ease-out),transform 620ms var(--ease-out);
+  transition-delay:var(--rd,0s)}
+.reveal.in{opacity:1;transform:none}
+
+/* ---------- side rail ---------- */
+.rail{
+  position:fixed;inset-inline-start:clamp(18px,2.4vw,40px);inset-block-start:50%;transform:translateY(-50%);
+  z-index:40;display:grid;justify-items:center;gap:.75rem;pointer-events:none;
+  font-family:var(--display);color:var(--gold-deep);
+  opacity:0;transition:opacity 300ms var(--ease-out);
+}
+.rail.on{opacity:1}
+.rail b{font-size:1.5rem;font-weight:600;line-height:1;font-variant-numeric:tabular-nums}
+.rail small{font-size:.85rem;opacity:.55;font-weight:500}
+.rail .track{position:relative;width:1px;height:26vh;background:rgba(192,132,87,.22);overflow:hidden}
+/* scroll-scrubbed: scaleY (GPU) instead of height (layout), and no transition —
+   a scrubbed indicator must track the finger exactly, not lag behind it */
+.rail .track i{position:absolute;inset-block-start:0;inset-inline:0;height:100%;
+  background:linear-gradient(var(--gold-2),var(--gold-deep));
+  transform:scaleY(0);transform-origin:top center;will-change:transform}
+@media (max-width:1180px){.rail{display:none}}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.foot{
+  position:relative;overflow:hidden;text-align:center;color:var(--cream);
+  padding:clamp(4rem,11vh,7.5rem) 0 clamp(2.4rem,5vh,3.4rem);
+  background:
+    radial-gradient(100% 80% at 50% 0%, #4A2F3C 0%, rgba(74,47,60,0) 60%),
+    linear-gradient(180deg,#2A1C24,#1B1116);
+  border-radius:clamp(28px,4vw,56px) clamp(28px,4vw,56px) 0 0;
+  margin-top:-1px;
+}
+.foot::before{
+  content:"";position:absolute;inset-block-start:0;inset-inline:0;height:1px;
+  background:linear-gradient(90deg,transparent,var(--gold-2),transparent);opacity:.75;
+}
+.foot .orb--f{width:46vmax;height:46vmax;bottom:-26vmax;left:50%;margin-left:-23vmax;
+  background:radial-gradient(circle,rgba(192,132,87,.34),transparent 65%);
+  position:absolute;border-radius:50%;filter:blur(80px);z-index:0;
+  animation:drift 30s var(--ease) infinite;will-change:transform}
+.foot__inner{position:relative;z-index:1}
+.thanks{
+  font-family:var(--serif);font-weight:400;font-size:clamp(1.5rem,1.3rem + .9vw,2.1rem);line-height:1.6;color:var(--cream);
+}
+.heart{display:inline-block;color:var(--rose);animation:beat 2.6s var(--ease) infinite;transform-origin:center}
+@keyframes beat{0%,100%{transform:scale(1)}12%{transform:scale(1.22)}24%{transform:scale(1)}36%{transform:scale(1.14)}48%{transform:scale(1)}}
+.foot .brand{margin-top:clamp(1.6rem,4vh,2.4rem)}
+.rights{margin-top:2.6rem;font-size:.74rem;letter-spacing:.18em;color:rgba(252,248,245,.36);font-weight:300}
+
+/* ---------- motion / print ---------- */
+/* Reduced motion = fewer, gentler animations — not zero.
+   Movement and ambient loops go; opacity fades stay, because they still
+   communicate that content is arriving. */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .orb,.orb--f,.cue i::after,.ornament svg,.heart,.hero__title{animation:none !important}
+  .hero__title{background-position:0 0}
+  .glow{display:none}
+
+  .word>span{transform:none;animation:none}
+  .fade,.card.in .rules li{transform:none;animation:softIn .4s ease forwards;animation-delay:var(--d,0s)}
+  .reveal{transform:none;transition:opacity 400ms ease;transition-delay:0s}
+
+  .card,.card__badge{transition:box-shadow 200ms ease,border-color 200ms ease}
+  .card:hover,.card:hover .card__badge{transform:none}
+}
+@keyframes softIn{to{opacity:1}}
+@media print{
+  body{background:#fff;color:#000}
+  .hero,.foot{background:#fff;color:#000;min-height:auto;padding:2rem 0;box-shadow:none}
+  .orb,.glow,.progress,.rail,.cue,body::after,.hero::before{display:none !important}
+  .hero__title{color:#000;-webkit-text-fill-color:#000}
+  .portrait{background:none;box-shadow:none;width:120px}
+  .portrait__ring,.portrait__mono{display:none}
+
+
+  .sheet{margin:0;box-shadow:none;border-radius:0;padding:1rem 0}
+  .card{break-inside:avoid;page-break-inside:avoid;box-shadow:none;border:1px solid #ddd;background:#fff}
+  .reveal,.rules li{opacity:1 !important;transform:none !important;filter:none !important}
+}
+
+/* ============================================================
+   EDITORIAL SALON THEME
+   ============================================================ */
+:root{
+  --plum:#211d1e;
+  --plum-deep:#171415;
+  --ink:#272223;
+  --ink-2:#544b4c;
+  --muted:#817576;
+  --cream:#fbf8f6;
+  --cream-2:#f4ece8;
+  --cream-3:#ead9d3;
+  --gold-1:#e5b9ae;
+  --gold-2:#c78374;
+  --gold-3:#f4dcd5;
+  --gold-deep:#a96052;
+  --rose:#cf8f83;
+  --line:rgba(75,53,54,.12);
+  --line-strong:rgba(169,96,82,.32);
+  --shadow-s:0 10px 34px rgba(54,36,37,.05);
+  --shadow-m:0 22px 54px rgba(54,36,37,.1);
+  --wrap:min(1240px,92vw);
+}
+body{background:var(--cream);line-height:1.65}
+body::after{opacity:.025}
+.glow,.orb,.orb--f,.cue,.rail{display:none!important}
+.progress{height:2px;background:var(--rose);box-shadow:none}
+
+.topbar{
+  position:absolute;inset:0 0 auto;z-index:20;height:88px;display:flex;align-items:center;
+  border-bottom:1px solid rgba(39,34,35,.08);color:var(--ink)
+}
+.topbar__inner{width:var(--wrap);margin:auto;display:flex;align-items:center;justify-content:space-between;gap:2rem;direction:ltr}
+.logo{color:inherit;text-decoration:none;line-height:1;text-align:center}
+.logo strong{display:block;font-family:var(--display);font-size:1.55rem;font-weight:500;letter-spacing:.24em;text-transform:uppercase}
+.logo small{display:block;margin-top:.42rem;font-size:.52rem;letter-spacing:.34em;text-transform:uppercase;color:var(--muted)}
+.nav{display:flex;align-items:center;gap:clamp(1.2rem,2.5vw,2.6rem);font-size:.76rem;letter-spacing:.08em}
+.nav a{color:inherit;text-decoration:none;position:relative}
+.nav a::after{content:"";position:absolute;inset:auto 0 -.45rem;height:1px;background:var(--rose);transform:scaleX(0);transition:transform .2s ease}
+.nav a:hover::after,.nav a:focus-visible::after{transform:scaleX(1)}
+.topbar__cta{padding:.72rem 1.25rem;background:rgba(255,255,255,.48);border:1px solid rgba(169,96,82,.2);color:var(--ink);text-decoration:none;font-size:.72rem;letter-spacing:.1em;transition:background .2s ease,color .2s ease}
+.topbar__cta:hover{background:var(--ink);color:#fff}
+
+.hero{
+  min-height:min(740px,100svh);padding:0;color:var(--ink);place-items:stretch;
+  background:linear-gradient(100deg,#f8f4f1 0%,#f8f4f1 43%,#ead8d1 100%);
+  isolation:isolate
+}
+.hero::before{
+  display:block;opacity:.2;inset:auto auto 7% 4%;width:32%;height:42%;
+  background:radial-gradient(circle at center,rgba(199,131,116,.24),transparent 68%);
+  -webkit-mask-image:none;mask-image:none
+}
+.hero__inner{display:grid;grid-template-columns:minmax(0,1fr) minmax(420px,1.05fr);grid-template-areas:"copy photo";align-items:center;min-height:min(740px,100svh);text-align:right;direction:ltr}
+.hero__copy{grid-area:copy;position:relative;z-index:2;direction:rtl;padding:clamp(3rem,8vw,7rem) clamp(1rem,5vw,5rem) clamp(5rem,8vw,7rem) 0}
+.hero__kicker{font-family:var(--display);font-size:clamp(1.35rem,2.5vw,2.1rem);font-style:italic;color:var(--rose);margin-bottom:.3rem}
+.hero__title{
+  color:var(--ink);background:none;-webkit-background-clip:border-box;background-clip:border-box;
+  -webkit-text-fill-color:var(--ink);opacity:1;transform:none;animation:none;
+  font-family:var(--display);font-size:clamp(3.9rem,7.1vw,7.5rem);font-weight:400;line-height:.82;letter-spacing:0
+}
+.hero__title span{display:block}
+.hero__title em{display:block;margin:.2em 0 .05em;font-size:.48em;font-weight:400;color:var(--rose)}
+.hero__meta{max-width:38ch;margin:2rem 0 0;font-size:1.04rem;letter-spacing:0;line-height:1.75;color:var(--ink-2);font-weight:300}
+.hero__actions{display:flex;align-items:center;gap:1.4rem;margin-top:2rem}
+.button{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 1.65rem;background:var(--ink);color:#fff;text-decoration:none;font-size:.78rem;letter-spacing:.06em;border:1px solid var(--ink);transition:transform .2s ease,background .2s ease,color .2s ease}
+.button:hover{transform:translateY(-2px);background:transparent;color:var(--ink)}
+.text-link{color:var(--ink);text-underline-offset:.35rem;text-decoration-color:var(--rose);font-size:.82rem}
+.portrait{grid-area:photo;width:100%;height:100%;aspect-ratio:auto;margin:0;border-radius:0;background:#ead8d1;box-shadow:none;overflow:hidden}
+.portrait::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#f8f4f1 0%,transparent 24%),linear-gradient(0deg,rgba(60,36,36,.09),transparent 34%);pointer-events:none}
+.portrait__img{height:100%;border-radius:0;object-position:50% 34%;filter:saturate(.74) contrast(.96)}
+.portrait__ring,.portrait__mono{display:none}
+
+.trust{position:relative;z-index:4;background:#ead0ca;border-block:1px solid rgba(117,74,69,.1)}
+.trust__inner{width:var(--wrap);margin:auto;display:grid;grid-template-columns:repeat(4,1fr)}
+.trust__item{padding:1.05rem 1.5rem;text-align:center;border-inline-start:1px solid rgba(117,74,69,.12)}
+.trust__item:last-child{border-inline-end:1px solid rgba(117,74,69,.12)}
+.trust__item b{display:block;font-family:var(--display);font-size:1rem;font-weight:600;letter-spacing:.08em}
+.trust__item span{font-size:.73rem;color:var(--ink-2)}
+
+.sheet{margin:0;border-radius:0;padding:clamp(4.5rem,9vh,7rem) 0;background:var(--cream);box-shadow:none;overflow:visible}
+.sheet::before{width:1px;height:70px;inset:0 50% auto;background:var(--rose);transform:translateY(-35px)}
+.sheet::after{display:none}
+.cards{grid-template-columns:1fr;align-items:start;gap:1px;max-width:920px;margin-inline:auto;background:var(--line);border:1px solid var(--line)}
+.card{height:100%;padding:2rem 2rem 2.2rem;border:0;border-radius:0;background:var(--cream);box-shadow:none;overflow:hidden}
+.card::before{inset:0;width:4px;height:100%;background:var(--rose);opacity:0}
+.card:hover{transform:none!important;box-shadow:none!important;background:#fff}
+.card:hover::before{opacity:1}
+.card__head,.rules{position:relative;z-index:1}
+.card__head{gap:clamp(.9rem,1.8vw,1.25rem);padding-bottom:1.15rem;margin-bottom:1.15rem;border-bottom:1px solid var(--line)}
+
+/* מספור עריכתי: ספרה נטויה גדולה, מופרדת מהכותרת בקו שיער */
+.card__badge{
+  width:auto;height:auto;aspect-ratio:auto;border-radius:0;
+  min-width:1.9ch;
+  padding-block:.12em;padding-inline:0 clamp(.75rem,1.6vw,1.05rem);
+  background:none;box-shadow:none;
+  border-inline-end:1px solid var(--line-strong);
+  font-family:var(--display);font-style:italic;font-weight:400;
+  font-size:clamp(2rem,1.5rem + 1.5vw,2.9rem);line-height:1.05;letter-spacing:0;
+  color:var(--rose);
+  transition:color .2s ease,border-color .2s ease;
+}
+.card__badge::after{display:none}
+.card:hover .card__badge{transform:none;color:var(--gold-deep);border-color:rgba(169,96,82,.45)}
+/* Bellefair קיים במשקל 400 בלבד — בקשת 500 הייתה מייצרת בולד סינתטי מכוער */
+.card__head h3{font-family:var(--serif);font-size:clamp(1.6rem,1.4rem + .75vw,2rem);font-weight:400;line-height:1.28}
+.rules{gap:.95rem}
+.rules p{font-size:clamp(1.04rem,1rem + .22vw,1.16rem);line-height:1.8;font-weight:400;color:var(--ink-2)}
+.rules li .dot{width:5px;height:5px;margin-top:.7em;border-radius:50%;transform:none;background:var(--rose);box-shadow:none}
+.rules li.note{border:0;border-inline-start:2px solid var(--rose);border-radius:0;background:#f4e6e2;padding:.75rem 1rem}
+.chip{padding:0 .35em;border:0;border-radius:0;background:#efd8d2;color:#8c4d42}
+
+.foot{margin:0;border-radius:0;padding:5rem 0 2.5rem;background:var(--ink);color:var(--cream)}
+.foot::before{background:linear-gradient(90deg,transparent,var(--rose),transparent)}
+
+.foot .brand{color:var(--cream)}
+
+@media (max-width:900px){
+  .hero{min-height:auto}.hero__inner{width:100%;grid-template-columns:1fr;grid-template-areas:"photo" "copy";min-height:0}
+  .portrait{height:min(62vh,560px)}
+  .portrait::after{background:linear-gradient(0deg,#f8f4f1 0%,transparent 30%)}
+  .hero__copy{width:min(92vw,650px);margin:auto;padding:2.5rem 0 4rem;text-align:center}
+  .hero__meta{margin-inline:auto}.hero__actions{justify-content:center}
+  .hero__title{font-size:clamp(3.6rem,15vw,6rem)}
+  .trust__inner{grid-template-columns:repeat(2,1fr)}
+  .cards{grid-template-columns:1fr}
+}
+@media (max-width:560px){
+  .portrait{height:52vh;min-height:350px}
+  .hero__copy{padding:2rem 1rem 3.5rem}.hero__kicker{font-size:1.2rem}.hero__meta{font-size:.94rem}
+
+
+  .card{padding:1.5rem 1.25rem 1.7rem}.card__head h3{font-size:1.25rem}
+}
+
+/* ============================================================
+   HERO — לוקאפ מינימלי + תמונה שלמה
+   ============================================================ */
+.hero__title{
+  display:grid;gap:clamp(.7rem,1.4vw,1.05rem);
+  font-family:var(--display);font-weight:400;font-size:1rem;
+  line-height:1;letter-spacing:0;color:var(--ink);
+}
+.hero__brand{
+  display:block;direction:ltr;
+  font-size:clamp(2.25rem,4.6vw,4.3rem);line-height:1.04;letter-spacing:.015em;
+  text-wrap:balance;
+}
+.hero__doc{
+  display:block;position:relative;
+  padding-block-start:clamp(.75rem,1.5vw,1.1rem);
+  font-family:var(--serif);font-weight:400;
+  font-size:clamp(1.2rem,1.9vw,1.8rem);line-height:1.3;letter-spacing:.1em;
+  color:var(--rose);
+}
+/* קו שיער קצר שמפריד בין שם העסק לשם המסמך */
+.hero__doc::before{
+  content:"";position:absolute;inset-block-start:0;inset-inline-start:0;
+  width:clamp(52px,7vw,86px);height:1px;background:var(--rose);opacity:.8;
+}
+
+/* התמונה מרובעת במקור (1080×1080) — מסגרת מרובעת מציגה אותה במלואה,
+   בלי שום חיתוך, ובלי הדהוי קצוות שנראה כמו קטיעה. */
+.portrait{
+  width:min(100%,clamp(250px,32vw,430px));height:auto;aspect-ratio:1;
+  margin-inline:auto;justify-self:center;align-self:center;
+  background:none;overflow:visible;
+  box-shadow:0 34px 64px -36px rgba(60,36,36,.45);
+}
+.portrait::after{display:none}
+/* מסגרת שיער מוסטת — נותנת לתמונה מקום במקום לחתוך אותה */
+.portrait::before{
+  content:"";position:absolute;z-index:-1;pointer-events:none;
+  inset:clamp(10px,1.5vw,18px) calc(-1 * clamp(10px,1.5vw,18px))
+        calc(-1 * clamp(10px,1.5vw,18px)) clamp(10px,1.5vw,18px);
+  border:1px solid rgba(169,96,82,.3);
+}
+.portrait__img{
+  width:100%;height:100%;object-fit:cover;object-position:50% 50%;
+  filter:saturate(.84) contrast(.98);
+}
+
+@media (max-width:900px){
+  .portrait{width:min(74vw,360px)}
+  .hero__doc::before{inset-inline:0;margin-inline:auto}
+  .hero__copy{padding-block:clamp(2rem,6vw,3rem) clamp(3rem,8vw,4.5rem)}
+}
+
+/* ============================================================
+   INTRO — ברוכות הבאות
+   ============================================================ */
+.intro{
+  max-width:58ch;margin:0 auto clamp(3rem,6vw,4.75rem);
+  text-align:center;
+}
+.intro h2{
+  font-family:var(--serif);font-weight:400;letter-spacing:0;
+  font-size:clamp(2.6rem,4.8vw,4rem);line-height:1.1;color:var(--ink);
+}
+.intro h2 em{font-style:normal;color:var(--rose)}
+.intro p{
+  margin-top:clamp(1rem,1.8vw,1.5rem);
+  font-size:clamp(1.15rem,1.06rem + .4vw,1.34rem);line-height:1.78;
+  font-weight:300;color:var(--ink-2);
+  text-wrap:pretty;
+}
+/* קו שיער קצר שסוגר את הפתיח ומוביל אל הסעיפים */
+.intro::after{
+  content:"";display:block;width:52px;height:1px;
+  margin:clamp(1.6rem,3vw,2.4rem) auto 0;
+  background:var(--rose);opacity:.7;
+}
+
+/* ============================================================
+   FOOTER — אותו גרדיאנט של ההירו, ממוראה לצד השני
+   ============================================================ */
+.foot{
+  /* ההירו: 100deg (הוורוד בצד אחד) — כאן 280deg סוגר את הדף מהצד הנגדי */
+  background:linear-gradient(280deg,#f8f4f1 0%,#f8f4f1 43%,#ead8d1 100%);
+  color:var(--ink);
+  padding-block:clamp(3.5rem,8vw,5.5rem) clamp(2rem,4vw,2.75rem);
+}
+.foot::before{background:linear-gradient(90deg,transparent,rgba(169,96,82,.45),transparent)}
+.ornament i{background:linear-gradient(var(--dir,90deg),transparent,var(--rose))}
+.ornament svg{color:var(--rose)}
+.thanks{color:var(--ink)}
+.foot .brand{color:var(--ink)}
+.foot .brand--sub{color:var(--muted)}
+.rights{color:var(--muted);opacity:.7}
+</style>
+</head>
+
+<body>
+
+<div class="progress" id="progress" aria-hidden="true"></div>
+<div class="glow" id="glow" aria-hidden="true"></div>
+
+<!-- icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-diamond" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round">
+    <path d="M12 2.6l9.4 9.4L12 21.4 2.6 12 12 2.6z"/>
+  </symbol>
+</svg>
+
+<!-- ============================ HERO ============================ -->
+<header class="hero" id="home">
+  <div class="wrap hero__inner">
+    <figure class="portrait fade" style="--d:.05s">
+      <img class="portrait__img"
+           src="images/kris.avif"
+           alt="קריסטינה, בעלת הסטודיו Kristina Place Of Beauty"
+           width="1080" height="1080"
+           fetchpriority="high" decoding="async">
+    </figure>
+
+    <div class="hero__copy">
+      <h1 class="hero__title fade" style="--d:.18s">
+        <span class="hero__brand">Kristina Place Of Beauty</span>
+        <span class="hero__doc">תקנון הסטודיו</span>
+      </h1>
+    </div>
+  </div>
+</header>
+
+<!-- ============================ CONTENT ============================ -->
+<main class="sheet" id="about">
+  <div class="wrap">
+
+    <!-- intro -->
+    <section class="intro reveal">
+      <h2>ברוכות <em>הבאות!</em></h2>
+      <p>
+        כדי שנוכל להעניק לכן שירות מקצועי, מדויק ואיכותי, וכדי לשמור על הזמן ועל הבריאות של כולן,
+        אנא קראו בעיון את נהלי הסטודיו.
+      </p>
+    </section>
+
+    <div class="cards">
+
+      <!-- 01 -->
+      <article class="card reveal" id="s1">
+        <div class="card__head">
+          <span class="card__badge">1</span>
+          <h3>מדיניות ביטולים ושינוי תורים</h3>
+        </div>
+        <ul class="rules">
+          <li style="--i:0"><span class="dot" aria-hidden="true"></span><p><strong>ביטול יום לפני התור:</strong> ביטול המבוצע יום קלנדרי אחד לפני מועד התור יגרור חיוב של <span class="chip">50%</span> מעלות הטיפול שהוזמן.</p></li>
+          <li style="--i:1"><span class="dot" aria-hidden="true"></span><p><strong>ביטול ביום התור:</strong> ביטול ביום הטיפול, מכל סיבה שהיא, יגרור חיוב של <span class="chip">100%</span> מעלות הטיפול שהוזמן.</p></li>
+          <li class="note" style="--i:2"><span class="dot" aria-hidden="true"></span><p><strong>שימו לב:</strong> קביעת תור חדש תתאפשר אך ורק לאחר הסדרת התשלום עבור התור שבוטל.</p></li>
+          <li style="--i:3"><span class="dot" aria-hidden="true"></span><p><strong>שינוי סוג הטיפול שהוזמן:</strong> אם נקבע טיפול מסוים, למשל לק ג'ל או מבנה אנטומי, לא ניתן לשנותו במועד ההגעה לטיפול, כגון להסרת ג'ל בלבד. שינוי בסוג הטיפול דורש הודעה של <span class="chip">48 שעות</span> מראש. שינוי בהתראה קצרה מ־48 שעות יחויב לפי הטיפול המקורי ששוריין.</p></li>
+        </ul>
+      </article>
+
+      <!-- 02 -->
+      <article class="card reveal" id="s2">
+        <div class="card__head">
+          <span class="card__badge">2</span>
+          <h3>זמני פעילות והודעות ביטול</h3>
+        </div>
+        <ul class="rules">
+          <li style="--i:0"><span class="dot" aria-hidden="true"></span><p>ימי שישי ושבת, וכן השעות שלאחר <span class="chip">16:00</span> בימים ראשון עד חמישי, נחשבים לזמנים שבהם הסטודיו סגור.</p></li>
+          <li style="--i:1"><span class="dot" aria-hidden="true"></span><p>הודעת ביטול שתישלח בזמנים אלה תיחשב כאילו התקבלה ביום העסקים הבא, ותסווג כביטול ביום התור, הכרוך בחיוב מלא.</p></li>
+        </ul>
+      </article>
+
+      <!-- 03 -->
+      <article class="card reveal" id="s3">
+        <div class="card__head">
+          <span class="card__badge">3</span>
+          <h3>מדיניות איחורים והקדמות</h3>
+        </div>
+        <ul class="rules">
+          <li style="--i:0"><span class="dot" aria-hidden="true"></span><p><strong>הקדמה:</strong> אין להקדים להגיע לסטודיו ללא תיאום מראש. אם הגעתן מוקדם יותר, יש ליצור קשר ולוודא שניתן לקבל אתכן לפני השעה שנקבעה.</p></li>
+          <li style="--i:1"><span class="dot" aria-hidden="true"></span><p><strong>איחור של עד 10 דקות:</strong> אם אין מרווח זמן בלוח הזמנים, יבוצע טיפול בסיסי בלבד: בסיס טבעי, ללא עיצובים, ציורים, מורכבויות או מדבקות.</p></li>
+          <li style="--i:2"><span class="dot" aria-hidden="true"></span><p><strong>איחור של יותר מ־10 דקות:</strong> לא יתאפשר טיפול. האיחור ייחשב כביטול ביום הטיפול ויגרור חיוב מלא של <span class="chip">100%</span>.</p></li>
+          <li class="note" style="--i:3"><span class="dot" aria-hidden="true"></span><p><strong>תקשורת מראש:</strong> אם אתן רואות שאתן עלולות לאחר, אנא צרו קשר בהקדם כדי שננסה למצוא פתרון. אם לא יימצא פתרון, הנהלים שלעיל יחולו במלואם.</p></li>
+        </ul>
+      </article>
+
+      <!-- 04 -->
+      <article class="card reveal" id="s4">
+        <div class="card__head">
+          <span class="card__badge">4</span>
+          <h3>אחריות על העבודה ותיקונים</h3>
+        </div>
+        <ul class="rules">
+          <li style="--i:0"><span class="dot" aria-hidden="true"></span><p><strong>התרוממות הלק:</strong> ניתנת אחריות מלאה למשך <span class="chip">3 ימים</span> ממועד ביצוע הטיפול. תיקון במסגרת האחריות מותנה בתיאום מראש.</p></li>
+          <li style="--i:1"><span class="dot" aria-hidden="true"></span><p><strong>בתום תקופת האחריות:</strong> תיקון ציפורן יבוצע בתשלום לפי המחירון העדכני ובתיאום מראש.</p></li>
+          <li style="--i:2"><span class="dot" aria-hidden="true"></span><p><strong>שבירת ציפורן:</strong> אין אחריות על ציפורן שנשברה כתוצאה ממכה או מנזק מכני. ניתן לתאם תור לבנייה או לתיקון ציפורן, בתשלום לפי המחירון ובתיאום מראש.</p></li>
+        </ul>
+      </article>
+
+      <!-- 05 -->
+      <article class="card reveal" id="s5">
+        <div class="card__head">
+          <span class="card__badge">5</span>
+          <h3>מצב בריאותי ומחלות ציפורניים</h3>
+        </div>
+        <ul class="rules">
+          <li style="--i:0"><span class="dot" aria-hidden="true"></span><p>אין להגיע לטיפול במקרים של פטרת, ירוקת, פצע פתוח או דלקת סביב הציפורן.</p></li>
+          <li style="--i:1"><span class="dot" aria-hidden="true"></span><p>במקרים אלה לא יינתן טיפול מטעמי היגיינה ובטיחות, והלקוחה תופנה לטיפול או לייעוץ רפואי.</p></li>
+        </ul>
+      </article>
+
+      <!-- 06 -->
+      <article class="card reveal" id="s6">
+        <div class="card__head">
+          <span class="card__badge">6</span>
+          <h3>שימוש בחומרי הסטודיו בלבד</h3>
+        </div>
+        <ul class="rules">
+          <li style="--i:0"><span class="dot" aria-hidden="true"></span><p>העבודה בסטודיו מתבצעת אך ורק באמצעות החומרים והתכשירים המאושרים והקיימים בקליניקה.</p></li>
+          <li style="--i:1"><span class="dot" aria-hidden="true"></span><p>אין להגיע עם לקים, ג'לים או תכשירים חיצוניים שנרכשו באופן עצמאי ולבקש להשתמש בהם. אם לא תהיה הסכמה לשימוש בחומרי הקליניקה, הטיפול לא יבוצע.</p></li>
+        </ul>
+      </article>
+
+      <!-- 07 -->
+      <article class="card reveal" id="s7">
+        <div class="card__head">
+          <span class="card__badge">7</span>
+          <h3>הגעה ללא מלווים</h3>
+        </div>
+        <ul class="rules">
+          <li style="--i:0"><span class="dot" aria-hidden="true"></span><p>כדי לשמור על אווירה רגועה, סטרילית וממוקדת, ההגעה לסטודיו היא ללקוחה בלבד, ללא מלווים, לרבות ילדים, חברות או בני זוג.</p></li>
+        </ul>
+      </article>
+
+      <!-- 08 -->
+      <article class="card reveal" id="s8">
+        <div class="card__head">
+          <span class="card__badge">8</span>
+          <h3>תשלום עבור השירות</h3>
+        </div>
+        <ul class="rules">
+          <li style="--i:0"><span class="dot" aria-hidden="true"></span><p>התשלום עבור הטיפול מבוצע במקום, לפני תחילת הטיפול או בסיומו בלבד.</p></li>
+          <li style="--i:1"><span class="dot" aria-hidden="true"></span><p>לא קיימת אפשרות לדחיית תשלום או ל"תשלום בהמשך".</p></li>
+        </ul>
+      </article>
+
+      <!-- 09 -->
+      <article class="card reveal" id="s9">
+        <div class="card__head">
+          <span class="card__badge">9</span>
+          <h3>תיאום מראש לפי סוג הטיפול והעיצוב</h3>
+        </div>
+        <ul class="rules">
+          <li style="--i:0"><span class="dot" aria-hidden="true"></span><p>חובה לבחור ולשריין מראש את התור המתאים לשירות המבוקש. אם מתוכנן עיצוב מורכב, כגון עיצוב לכל עשר הציפורניים, ציורים או אלמנטים הדורשים זמן עבודה נוסף, יש לעדכן על כך בעת קביעת התור כדי להבטיח מרווח זמן מספק. לא ניתן לבצע עיצובים החורגים מהזמן ששוריין בפועל.</p></li>
+        </ul>
+      </article>
+
+      <!-- 10 -->
+      <article class="card reveal" id="s10">
+        <div class="card__head">
+          <span class="card__badge">10</span>
+          <h3>אישור עיצוב, צבע ושינויים לאחר סיום הטיפול</h3>
+        </div>
+        <ul class="rules">
+          <li style="--i:0"><span class="dot" aria-hidden="true"></span><p>בחירת הצבע והעיצוב נעשית בתיאום מלא במהלך הטיפול. לאחר סיום התור לא ניתן לבצע שינויים או החלפות ללא עלות. אם אינך מרוצה מהבחירה לאחר סיום הטיפול, שינוי הצבע או העיצוב יתאפשר אך ורק בתור חדש ובתשלום מלא לפי המחירון.</p></li>
+        </ul>
+      </article>
+
+      <!-- 11 -->
+      <article class="card reveal" id="s11">
+        <div class="card__head">
+          <span class="card__badge">11</span>
+          <h3>תמונות השראה</h3>
+        </div>
+        <ul class="rules">
+          <li style="--i:0"><span class="dot" aria-hidden="true"></span><p>ניתן להביא תמונות השראה מהאתר Pinterest, תמונות שנוצרו בבינה מלאכותית (AI) או עבודות של אמניות אחרות. עם זאת, אין התחייבות להעתקה מדויקת. עבודת יד מושפעת ממבנה הציפורן, מהטכניקה ומהחומרים, ולכן התוצאה תהיה בהשראת התמונה בלבד. התחייבות לתוצאה מדויקת ניתנת רק לעבודות מתוך תיק העבודות הרשמי של הסטודיו.</p></li>
+        </ul>
+      </article>
+
+    </div>
+  </div>
+</main>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="foot" id="contact">
+  <div class="wrap foot__inner">
+    <div class="ornament reveal">
+      <i></i><svg><use href="#i-diamond"/></svg><i></i>
+    </div>
+
+
+    <p class="thanks reveal">תודה על ההבנה ועל שיתוף הפעולה <span class="heart">♥</span></p>
+    <p class="brand reveal">Kristina</p>
+    <p class="brand brand--sub reveal">Place&nbsp;Of&nbsp;Beauty</p>
+    <p class="rights">כל הזכויות שמורות</p>
+  </div>
+</footer>
+
+<!-- side rail -->
+<aside class="rail" id="rail" aria-hidden="true">
+  <b id="railNum">01</b>
+  <span class="track"><i id="railFill"></i></span>
+  <small>11</small>
+</aside>
+
+<script>
+(function () {
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---- reveal on scroll ----
+     Runs under reduced motion too: CSS downgrades it to a plain opacity fade
+     rather than removing the cue that content is arriving. */
+  var targets = document.querySelectorAll('.reveal, .card');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { rootMargin: '0px 0px -12% 0px', threshold: 0.12 });
+    targets.forEach(function (t) { io.observe(t); });
+  } else {
+    targets.forEach(function (t) { t.classList.add('in'); });
+  }
+
+  /* ---- idle the ambient loops while their section is off-screen ----
+     Orbs, shimmer and the scroll cue are infinite animations; there is no
+     reason to burn GPU on them once the user has scrolled past. */
+  if ('IntersectionObserver' in window) {
+    var pauseIO = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { e.target.classList.toggle('paused', !e.isIntersecting); });
+    }, { threshold: 0 });
+    document.querySelectorAll('.hero, .foot').forEach(function (s) { pauseIO.observe(s); });
+  }
+
+  /* ---- scroll progress + side rail ---- */
+  var bar   = document.getElementById('progress');
+  var rail  = document.getElementById('rail');
+  var rNum  = document.getElementById('railNum');
+  var rFill = document.getElementById('railFill');
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.card'));
+  var ticking = false;
+
+  function onScroll() {
+    var doc = document.documentElement;
+    var max = doc.scrollHeight - window.innerHeight;
+    var p = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
+    bar.style.setProperty('--p', p);
+    /* transform, not height: no layout work per scroll frame */
+    rFill.style.transform = 'scaleY(' + p.toFixed(4) + ')';
+
+    var mid = window.innerHeight * 0.42, current = 0;
+    for (var i = 0; i < cards.length; i++) {
+      if (cards[i].getBoundingClientRect().top <= mid) current = i + 1;
+    }
+    if (current > 0) {
+      rail.classList.add('on');
+      rNum.textContent = current < 10 ? '0' + current : String(current);
+    } else {
+      rail.classList.remove('on');
+    }
+    ticking = false;
+  }
+  window.addEventListener('scroll', function () {
+    if (!ticking) { ticking = true; requestAnimationFrame(onScroll); }
+  }, { passive: true });
+  window.addEventListener('resize', onScroll, { passive: true });
+  onScroll();
+
+  /* ---- soft pointer glow (fine pointers only) ---- */
+  var glow = document.getElementById('glow');
+  if (!reduce && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    var gx = window.innerWidth / 2, gy = window.innerHeight / 2, cx = gx, cy = gy, raf;
+    document.body.classList.add('has-pointer');
+    window.addEventListener('pointermove', function (e) {
+      gx = e.clientX; gy = e.clientY;
+      if (!raf) raf = requestAnimationFrame(loop);
+    }, { passive: true });
+    function loop() {
+      cx += (gx - cx) * 0.09;
+      cy += (gy - cy) * 0.09;
+      glow.style.transform = 'translate3d(' + cx + 'px,' + cy + 'px,0)';
+      raf = (Math.abs(gx - cx) > 0.5 || Math.abs(gy - cy) > 0.5) ? requestAnimationFrame(loop) : null;
+    }
+  }
+})();
+</script>
+
+</body>
+</html>
