@@ -623,9 +623,11 @@ body::after{opacity:.025}
 }
 
 @media (max-width:900px){
+  /* התמונה היא האלמנט הראשון בעמוד — בלי ריווח עליון היא נדבקת לקצה המסך */
+  .hero__inner{padding-block-start:clamp(2.75rem,10vw,4.5rem);row-gap:clamp(1.5rem,5vw,2.25rem)}
   .portrait{width:min(74vw,360px)}
   .hero__doc::before{inset-inline:0;margin-inline:auto}
-  .hero__copy{padding-block:clamp(2rem,6vw,3rem) clamp(3rem,8vw,4.5rem)}
+  .hero__copy{padding-block:0 clamp(3rem,8vw,4.5rem)}
 }
 
 /* ============================================================
